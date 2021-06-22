@@ -1,0 +1,12 @@
+mutation CreateFolder($input: CreateFolderInput!) {
+  createFolder(input: $input) {
+    ok 
+    errors {
+      ...ErrorFragment
+    }
+    folder {
+      id
+      name
+    }
+  }
+}

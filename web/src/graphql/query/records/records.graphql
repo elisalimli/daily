@@ -1,0 +1,10 @@
+query Records($fileId: String!) {
+  records(fileId: $fileId) {
+    id
+    value
+    createdAt
+  }
+  file(fileId: $fileId) {
+    unit
+  }
+}

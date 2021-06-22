@@ -1,0 +1,8 @@
+query Folders($rootIds:[String!]!) {
+  folders(
+    rootIds: $rootIds
+  ) {
+    id
+    name
+  }
+}

@@ -1,0 +1,12 @@
+mutation CreateFile($input: CreateFileInput!) {
+  createFile(input: $input) {
+    ok 
+    errors {
+      ...ErrorFragment
+    }
+    file {
+      id
+      name
+    }
+  }
+}

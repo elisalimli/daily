@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+}
+
+model User {
+
+  id        String   @id @default(uuid())
+  email     String   @unique
+  username  String   @unique
+  password  String
+  files     File[]
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  Folder Folder[]
+  @@map("user")
+}
+
+model File {
+  id        String   @id @default(uuid())
+  name      String
+  rootId    String?  @map("root_id")
+  unit      String   @default("km")
+  creator   User     @relation(fields: [creatorId], references: [id])
+  creatorId String   @map("creator_id")
+  folder    Folder?  @relation(fields: [rootId], references: [id])
+  records   Record[]
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("file")
+}
+
+model Folder {
+  id        String   @id @default(uuid())
+  name      String
+  rootId    String?  @map("root_id")
+  creator   User     @relation(fields: [creatorId], references: [id])
+  creatorId String   @map("creator_id")
+  files     File[]
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("folder")
+}
+
+model Record {
+  id        String   @id @default(uuid())
+  value     Int
+  file      File     @relation(fields: [fileId], references: [id])
+  fileId    String   @map("file_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("record")
+}

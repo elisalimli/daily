@@ -1,0 +1,9 @@
+fragment RegistrationFragment on RegisterResponse {
+  ok
+  errors {
+    ...ErrorFragment
+  }
+  user {
+    ...UserFragment
+  }
+}

@@ -1,0 +1,10 @@
+query FilesFolders($rootId: String) {
+  filesFolders(rootId: $rootId) {
+    files {
+      ...FileFragment
+    }
+    folders {
+      ...FolderFragment
+    }
+  }
+}

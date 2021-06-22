@@ -1,0 +1,11 @@
+export { RegisterResolver } from "./resolvers/user/register/register";
+export { LoginResolver } from "./resolvers/user/login/login";
+export { MeResolver } from "./resolvers/user/me/me";
+export { LogoutResolver } from "./resolvers/user/logout/logout";
+export { CreateFileResolver } from "./resolvers/file/createFile/createFile";
+export { CreateFolderResolver } from "./resolvers/folder/createFolder/createFolder";
+export { FilesFoldersResolver } from "./resolvers/filesFolders/filesFolders";
+export { CreateRecordResolver } from "./resolvers/record/createRecord/createRecord";
+export { RecordsResolver } from "./resolvers/record/records/records";
+export { FoldersResolver } from "./resolvers/folder/folders/folders";
+export { FileResolver } from "./resolvers/file/file/file";

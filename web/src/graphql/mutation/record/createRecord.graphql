@@ -1,0 +1,12 @@
+mutation CreateRecord($input: CreateRecordInput!) {
+  createRecord(input: $input) {
+    ok
+    errors {
+      ...ErrorFragment
+    }
+    record {
+      id
+      value
+    }
+  }
+}
