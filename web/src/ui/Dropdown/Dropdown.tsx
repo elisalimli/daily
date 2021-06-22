@@ -20,6 +20,7 @@ const Dropdown: React.FC<DropdownProps> = ({
     const handleClick = (e) => {
       useClickOutside(wrapperRef, buttonRef, e.target, setOpen);
     };
+console.log('ads');
     document.addEventListener("mousedown", handleClick);
     return () => {
       document.removeEventListener("mousedown", handleClick);
