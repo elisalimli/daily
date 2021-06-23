@@ -1,4 +1,5 @@
 import React, { ButtonHTMLAttributes } from "react";
+import ReactTooltip, { TooltipProps } from "react-tooltip";
 import { fontWeightClassNames, FontWeightProps } from "../Header";
 import Loader from "../Loader/Loader";
 
@@ -23,6 +24,9 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     block?: boolean;
     ring?: string;
     icon?: any;
+    tooltip?: any;
+    tooltipId?: string;
+    tooltipProps?: TooltipProps;
   };
 
 const Button: React.FC<ButtonProps> = ({
@@ -37,6 +41,10 @@ const Button: React.FC<ButtonProps> = ({
   ring = "focus:ring-4",
   fontWeight = "normal",
   icon,
+
+  tooltip,
+  tooltipId,
+  tooltipProps,
   children,
 
   ...props
@@ -59,6 +67,8 @@ const Button: React.FC<ButtonProps> = ({
         } flex justify-center items-center ${extraClassName}`}
         disabled={loading}
         type="button"
+        data-tip
+        data-for={tooltipId}
         {...props}
       >
         {icon}
@@ -73,6 +83,17 @@ const Button: React.FC<ButtonProps> = ({
           </span>
         ) : null}
       </button>
+      {tooltipId ? (
+        <ReactTooltip
+          id={tooltipId}
+          backgroundColor="var(--color-primary-300)"
+          effect="solid"
+          place="bottom"
+          {...tooltipProps}
+        >
+          {tooltip}
+        </ReactTooltip>
+      ) : null}
     </div>
   );
 };

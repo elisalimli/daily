@@ -1,26 +1,17 @@
-import React, { useState } from "react";
-import { FilePlus, Plus, FolderPlus, MoreVertical } from "react-feather";
+import React from "react";
+import { FilePlus, FolderPlus, MoreVertical, Plus } from "react-feather";
+import { useMediaQuery } from "react-responsive";
+import { useFileFolderStore } from "../../../stores/useFileFolderStore";
+import { useModalStore } from "../../../stores/useModalStore";
+import Dropdown from "../../Dropdown/Dropdown";
+import DropdownElement from "../../Dropdown/DropdownElement";
 import Button from "../../Form/Button";
 import Header from "../../Header";
+import Icon from "../../Icon";
 import { iconSize } from "../../IconSize";
 import CreateFileModal from "../../Modals/CreateFileModal";
 import CreateFolderModal from "../../Modals/CreateFolderModal";
-import { useModalStore } from "../../../stores/useModalStore";
 import CreateRecordModal from "../../Modals/CreateRecordModal";
-import { useFileFolderStore } from "../../../stores/useFileFolderStore";
-import { useMediaQuery } from "react-responsive";
-import DropdownElement from "../../Dropdown/DropdownElement";
-import Dropdown from "../../Dropdown/Dropdown";
-import Icon from "../../Icon";
-
-const dropdownElements = Array.from({ length: 3 }).map(() => (
-  <DropdownElement>Profile</DropdownElement>
-));
-const dropdownButton = <MoreVertical />;
-export const userDropdownProps = {
-  button: dropdownButton,
-  elements: dropdownElements,
-};
 
 const FeedSection = () => {
   const { isRecord } = useFileFolderStore();
@@ -45,12 +36,12 @@ const FeedSection = () => {
       </DropdownElement>
 
       <DropdownElement Tag="button" onClick={handleFileModal}>
-        <FilePlus />
+        <FilePlus size={iconSize.small} />
         New File
       </DropdownElement>
 
       <DropdownElement Tag="button" onClick={handleFolderModal}>
-        <FolderPlus /> New Folder
+        <FolderPlus className="mr-1" /> New Folder
       </DropdownElement>
     </>
   );
@@ -73,45 +64,37 @@ const FeedSection = () => {
             <Dropdown elements={elements} button={<MoreVertical />} />
           </Icon>
         ) : (
-          <>
-            <div className="flex space-x-1">
-              {isRecord ? (
-                <>
-                  <Button
-                    onClick={handleRecordModal}
-                    variant="outline"
-                    fontWeight="bold"
-                    padding="py-2 px-3"
-                    icon={<Plus size={iconSize.medium} className="mr-1" />}
-                  >
-                    Record
-                  </Button>
-                  <div
-                    style={{ height: 30, width: 2 }}
-                    className="bg-primary-300 mx-2  rounded-5"
-                  />
-                </>
-              ) : null}
+          <div className="flex space-x-1">
+            {isRecord ? (
               <Button
-                onClick={handleFileModal}
+                onClick={handleRecordModal}
                 variant="outline"
                 fontWeight="bold"
                 padding="py-2 px-3"
-                icon={<FilePlus size={iconSize.medium} className="mr-1" />}
-              >
-                File
-              </Button>
-              <Button
-                onClick={handleFolderModal}
-                variant="outline"
-                fontWeight="bold"
-                padding="py-2 px-3"
-                icon={<FolderPlus size={iconSize.medium} className="mr-1" />}
-              >
-                Folder
-              </Button>
-            </div>
-          </>
+                icon={<Plus size={iconSize.medium} />}
+                tooltip="Record"
+                tooltipId="plusRecord"
+              />
+            ) : null}
+            <Button
+              onClick={handleFileModal}
+              variant="outline"
+              fontWeight="bold"
+              padding="py-2 px-3"
+              icon={<FilePlus size={iconSize.medium} />}
+              tooltip="File"
+              tooltipId="plusFile"
+            />
+            <Button
+              onClick={handleFolderModal}
+              variant="outline"
+              fontWeight="bold"
+              padding="py-2 px-3"
+              icon={<FolderPlus size={iconSize.medium} />}
+              tooltip="Folder"
+              tooltipId="plusFolder"
+            />
+          </div>
         )}
       </div>
 
