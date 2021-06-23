@@ -17,7 +17,7 @@ const LayoutWrapper: React.FC<Props> = ({ children, screenType }) => {
   }
 
   return (
-    <div className="flex flex-col px-4 md:px-0 md:items-center mx-auto w-full">
+    <div className="flex flex-col md:items-center mx-auto w-full">
       <div
         className="grid px-2 max-w-full"
         style={{

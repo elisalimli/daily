@@ -24,7 +24,7 @@ interface RecordChartProps {
 const RecordChart: React.FC<RecordChartProps> = ({ data, unit }) => {
   return (
     <div className="mt-4">
-      <ResponsiveContainer>
+      <ResponsiveContainer width="99.99%" height={400}>
         <AreaChart data={data}>
           <Area dataKey="value" stroke="#5575e7" fill="url(#color)" />
 
