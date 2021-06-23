@@ -4,12 +4,12 @@
 
 ## What is Daily ? 
 > An app to keep your track
-> Share your records with people (todo)
-> Start challenges (todo)
-> Leave comment,share,like (todo)
-> Chat with your friends (todo)
-> All you need in this app
-> We will be add more features,please add a feature here
+>    -  Share your records with people (todo)
+>    -  Start challenges (todo)
+>    -  Leave comment,share,like (todo)
+>    -  Chat with your friends (todo)
+>    -  All you need in this app
+>    -  We will be add more features,please add a feature here
 
 Contributors helping to review/merge pull requests:
 
