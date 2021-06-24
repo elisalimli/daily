@@ -52,10 +52,10 @@ module.exports = {
         100: "var(--color-primary-100)",
         200: "var(--color-primary-200)",
         300: "var(--color-primary-300)",
-        600: "var(--color-primary-600)",
+        400: "var(--color-primary-400)",
+        500: "var(--color-primary-500)",
         700: "var(--color-primary-700)",
         800: "var(--color-primary-800)",
-        850: "var(--color-primary-850)",
         900: "var(--color-primary-900)",
       },
       secondary: {
@@ -63,12 +63,7 @@ module.exports = {
         "washed-out": "var(--color-secondary-washed-out)",
       },
       accent: {
-        DEFAULT: "var(--color-accent)",
-        hover: "var(--color-accent-hover)",
-        disabled: "var(--color-accent-disabled)",
-      },
-      green: {
-        DEFAULT: "var(--color-green)",
+        dark: "var(--color-dark)",
       },
     },
     minWidth: {

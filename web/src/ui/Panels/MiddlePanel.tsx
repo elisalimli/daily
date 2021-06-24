@@ -5,8 +5,7 @@ import {
   SCREEN_COLUMNS_TYPE,
 } from "../../utils/hooks/useScreenType";
 import Dropdown from "../Dropdown/Dropdown";
-import Logo from "../Navbar/Logo";
-import { userDropdownProps } from "../shared/userDropdownProps";
+import Logo from "../Logo";
 
 interface MiddlePanelProps {
   SearchBar: any;

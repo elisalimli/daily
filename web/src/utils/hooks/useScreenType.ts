@@ -13,16 +13,11 @@ export const useScreenType = () => {
   const is1Cols = useMediaQuery({ minWidth: 800 });
   const fullscreen = useMediaQuery({ maxWidth: 799 });
 
-  if (is3Cols) {
-    return SCREEN_COLUMNS_TYPE[3];
-  }
-  if (is2Cols) {
-    return SCREEN_COLUMNS_TYPE[2];
-  }
-  if (is1Cols) {
-    return SCREEN_COLUMNS_TYPE[1];
-  }
-  if (fullscreen) {
-    return SCREEN_COLUMNS_TYPE.fullscreen;
-  }
+  if (is3Cols) return SCREEN_COLUMNS_TYPE[3];
+
+  if (is2Cols) return SCREEN_COLUMNS_TYPE[2];
+
+  if (is1Cols) return SCREEN_COLUMNS_TYPE[1];
+
+  if (fullscreen) return SCREEN_COLUMNS_TYPE.fullscreen;
 };

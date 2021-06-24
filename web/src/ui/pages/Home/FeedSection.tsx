@@ -6,7 +6,7 @@ import { useModalStore } from "../../../stores/useModalStore";
 import Dropdown from "../../Dropdown/Dropdown";
 import DropdownElement from "../../Dropdown/DropdownElement";
 import Button from "../../Form/Button";
-import Header from "../../Header";
+import Header from "../../Typography/Header";
 import Icon from "../../Icon";
 import { iconSize } from "../../IconSize";
 import CreateFileModal from "../../Modals/CreateFileModal";
@@ -29,27 +29,38 @@ const FeedSection = () => {
   const handleFileModal = () => setOpenFile(!openFile);
   const handleRecordModal = () => setOpenRecord(!openRecord);
 
-  const elements = (
-    <>
-      <DropdownElement Tag="button" onClick={handleRecordModal}>
-        <Plus /> New Record
-      </DropdownElement>
+  const buttons = [
+    {
+      onClick: handleRecordModal,
+      Icon: Plus,
+      tooltip: "Record",
+      tooltipId: "plusRecord",
+      isRecordButton: true,
+    }
+    {
+      onClick: handleFolderModal,
+      Icon: FolderPlus,
+      tooltip: "Folder",
+      tooltipId: "plusFolder",
+    },
+    {
+      onClick: handleFileModal,
+      Icon: FilePlus,
+      tooltip: "File",
+      tooltipId: "plusFile",
+    },
+  ];
 
-      <DropdownElement Tag="button" onClick={handleFileModal}>
-        <FilePlus size={iconSize.small} />
-        New File
-      </DropdownElement>
-
-      <DropdownElement Tag="button" onClick={handleFolderModal}>
-        <FolderPlus className="mr-1" /> New Folder
-      </DropdownElement>
-    </>
-  );
+  const dropdownElements = buttons.map(({ icon, onClick, tooltip }) => (
+    <DropdownElement Tag="button" onClick={onClick}>
+      {icon} <span className="ml-1">New {tooltip}</span>
+    </DropdownElement>
+  ));
 
   return (
     <div className="pr-2 md:pr-0 pl-4 pb-4 flex justify-between items-center">
       <Header
-        headerType="h1"
+        as="h1"
         color="text-primary-100"
         fontWeight="bold"
         extraClassName="text-sm md:text-2xl"
@@ -61,39 +72,22 @@ const FeedSection = () => {
       <div className="flex items-center">
         {fullscreen ? (
           <Icon>
-            <Dropdown elements={elements} button={<MoreVertical />} />
+            <Dropdown elements={dropdownElements} button={<MoreVertical />} />
           </Icon>
         ) : (
           <div className="flex space-x-1">
-            {isRecord ? (
-              <Button
-                onClick={handleRecordModal}
-                variant="outline"
-                fontWeight="bold"
-                padding="py-2 px-3"
-                icon={<Plus size={iconSize.medium} />}
-                tooltip="Record"
-                tooltipId="plusRecord"
-              />
-            ) : null}
-            <Button
-              onClick={handleFileModal}
-              variant="outline"
-              fontWeight="bold"
-              padding="py-2 px-3"
-              icon={<FilePlus size={iconSize.medium} />}
-              tooltip="File"
-              tooltipId="plusFile"
-            />
-            <Button
-              onClick={handleFolderModal}
-              variant="outline"
-              fontWeight="bold"
-              padding="py-2 px-3"
-              icon={<FolderPlus size={iconSize.medium} />}
-              tooltip="Folder"
-              tooltipId="plusFolder"
-            />
+            {buttons.map(({ isRecordButton, Icon, ...rest }, i) =>
+              !isRecordButton || (isRecordButton && isRecord) ? (
+                <Button
+                  key={`feed-section-button-${i}`}
+                  variant="outline"
+                  fontWeight="bold"
+                  padding="p-2 px-3"
+                  icon={<Icon />}
+                  {...rest}
+                />
+              ) : null
+            )}
           </div>
         )}
       </div>

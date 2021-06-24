@@ -4,7 +4,7 @@ import Button from "../Form/Button";
 import Modal, { ModalProps } from "../Form/Modal";
 import MyForm from "../Form/MyForm";
 import InputField from "../Form/TextField/InputField";
-import Header from "../Header";
+import Header from "../Typography/Header";
 import { useCreateRecordMutation } from "../../generated/graphql";
 import { useFileFolderStore } from "../../stores/useFileFolderStore";
 import { toErrorMap } from "./../../utils/toErrorMap";

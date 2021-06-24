@@ -3,7 +3,7 @@ import {
   SCREEN_COLUMNS_TYPE,
   useScreenType,
 } from "../../utils/hooks/useScreenType";
-import Logo from "../Navbar/Logo";
+import Logo from "../Logo";
 import Link from "../utilities/Link";
 
 interface FormValues {

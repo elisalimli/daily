@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../Navbar/Logo";
+import Logo from "../Logo";
 
 const LeftPanel: React.FC = () => {
   return (

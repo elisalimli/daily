@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes } from "react";
 import ReactTooltip, { TooltipProps } from "react-tooltip";
-import { fontWeightClassNames, FontWeightProps } from "../Header";
+import { fontWeightClassNames, FontWeightProps } from "../Typography/Header";
 import Loader from "../Loader/Loader";
 
 const styles = {

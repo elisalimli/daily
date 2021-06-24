@@ -1,12 +1,15 @@
 import React from "react";
 import Loader from "./Loader";
+import Logo from "../Logo";
 
-interface Props {}
+interface Props {
+  logo?: boolean;
+}
 
-const CenteredLoader = () => {
+const CenteredLoader: React.FC<Props> = ({ logo = true }) => {
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <Loader />
+      {logo ? <Logo /> : <Loader />}
     </div>
   );
 };

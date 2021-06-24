@@ -7,7 +7,7 @@ import Button from "../ui/Form/Button";
 import FormWrapper, { IFormFooterLink } from "../ui/Form/FormWrapper";
 import MyForm from "../ui/Form/MyForm";
 import InputField from "../ui/Form/TextField/InputField";
-import Header from "../ui/Header";
+import Header from "../ui/Typography/Header";
 import UnProtectedRoute from "../ui/utilities/UnProtectedRoute";
 import { toErrorMap } from "../utils/toErrorMap";
 import { withApollo } from "../utils/withApollo";
