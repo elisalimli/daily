@@ -25,16 +25,6 @@ const HomePage = () => {
 
   if (!screenType) return <CenteredLoader logo />;
 
-  let gridTemplateColumns = "60px 640px 325px";
-
-  if (screenType === SCREEN_COLUMNS_TYPE[2]) {
-    gridTemplateColumns = "60px 550px 1fr";
-  } else if (screenType === SCREEN_COLUMNS_TYPE[1]) {
-    gridTemplateColumns = "60px 640px";
-  } else if (screenType === SCREEN_COLUMNS_TYPE.fullscreen) {
-    gridTemplateColumns = "1fr";
-  }
-
   return (
     <ProtectedRoute>
       <Head>
@@ -44,7 +34,7 @@ const HomePage = () => {
       <div
         className="grid"
         style={{
-          gridTemplateColumns,
+          gridTemplateColumns: "60px 1fr",
           gridGap: 60,
         }}
       >
@@ -95,54 +85,533 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        {/* <div className="sticky top-0 h-screen py-2 border-r-default border-secondary-washed-out">
-          <div className="flex items-center justify-center h-full">
-            <div className="flex flex-col items-start justify-between h-full px-4">
-              <div>
-                <div className="pb-2">
-                  <Logo width={30} height={30} />
-                </div>
-
-                <div>
-                  {[
-                    {
-                      href: "/home",
-                      icon: AiOutlineHome,
-                      filledIcon: AiFillHome,
-                    },
-                    {
-                      href: "/explore",
-                      icon: AiOutlineCompass,
-                      filledIcon: AiFillCompass,
-                    },
-                    {
-                      href: "/profile",
-                      icon: AiOutlineUser,
-                      filledIcon: BsFillPersonPlusFill,
-                    },
-                  ].map(({ icon: Icon, href }) => (
-                    <div className="flex py-2">
-                      <Link href={href}>
-                        <Icon className="text-2xl" />
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <img
-                  className="rounded-full"
-                  width="40px"
-                  height="40px"
-                  src="https://avatars.githubusercontent.com/u/67149699?v=4"
-                  alt="profile"
-                />
-              </div>
-            </div>
+        <main className="max-w-screen-xl">
+          <div>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
           </div>
-        </div> */}
-        <div>b</div>
-        <div>c</div>
+          <div>
+            Lorem ipsum is a name for a common type of placeholder text. Also
+            known as filler or dummy text, this is simply copy that serves to
+            fill a space without actually saying anything meaningful. ... Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem
+            ipsum is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021 Lorem ipsum
+            is a name for a common type of placeholder text. Also known as
+            filler or dummy text, this is simply copy that serves to fill a
+            space without actually saying anything meaningful. ... Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.Mar 3, 2021
+          </div>
+        </,>
       </div>
     </ProtectedRoute>
   );
