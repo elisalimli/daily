@@ -39,7 +39,7 @@ const CreateFileModal: React.FC<ModalProps> = ({ handleModal, isOpen }) => {
       >
         {({ isSubmitting }) => (
           <MyForm isModal width={550}>
-            <Header headerType="h1" fontWeight="semibold" size="2xl">
+            <Header as="h1" fontWeight="semibold" size="2xl">
               Create File
             </Header>
             <InputField name="name" placeholder="file's name" label="Name" />

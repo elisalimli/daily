@@ -1,5 +1,5 @@
-import React, { InputHTMLAttributes, LinkHTMLAttributes, Props } from "react";
 import NextLink, { LinkProps as NextLinkProps } from "next/link";
+import React from "react";
 
 type LinkProps = NextLinkProps & {
   extraClassName?: string;

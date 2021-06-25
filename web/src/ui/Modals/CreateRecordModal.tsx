@@ -37,7 +37,7 @@ const CreateRecordModal: React.FC<ModalProps> = ({ handleModal, isOpen }) => {
       >
         {({ isSubmitting }) => (
           <MyForm isModal width={550}>
-            <Header headerType="h1" fontWeight="semibold" size="2xl">
+            <Header as="h1" fontWeight="semibold" size="2xl">
               Create Record
             </Header>
             <InputField

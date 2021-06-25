@@ -67,7 +67,7 @@ const Register = () => {
           {({ isSubmitting }) => (
             <MyForm>
               <Header
-                headerType="h1"
+                as="h1"
                 centered
                 color="text-primary-100"
                 size="4xl"

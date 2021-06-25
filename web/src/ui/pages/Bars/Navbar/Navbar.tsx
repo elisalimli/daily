@@ -1,6 +1,7 @@
 import React from "react";
 import Brand from "./Brand";
 import Navigator from "./Navigator";
+import Profile from "./Profile";
 
 interface NavbarProps {}
 
@@ -9,6 +10,7 @@ const Navbar: React.FC<NavbarProps> = () => (
     <Brand />
     <div className="flex flex-col justify-between h-full">
       <Navigator />
+      <Profile />
     </div>
   </div>
 );

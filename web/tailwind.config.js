@@ -58,6 +58,7 @@ module.exports = {
         700: "var(--color-primary-700)",
         800: "var(--color-primary-800)",
         900: "var(--color-primary-900)",
+        hover: "var(--color-primary-hover)",
       },
       secondary: {
         DEFAULT: "var(--color-secondary)",

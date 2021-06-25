@@ -68,7 +68,7 @@ const Login = () => {
         >
           {({ isSubmitting }) => (
             <MyForm>
-              <Header headerType="h1" fontWeight="semibold" size="3xl" centered>
+              <Header as="h1" fontWeight="semibold" size="3xl" centered>
                 Login
               </Header>
               <InputField

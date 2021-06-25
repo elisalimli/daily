@@ -1,11 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+html,
+body,
+#__next {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-button-text);
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: fixed;
+}
+
+#__next {
+  overflow: auto;
 }
 
 h1,
@@ -26,17 +44,19 @@ p.bold {
 
 :root {
   --color-button-text: #fff;
-  --color-primary-100: rgba(29, 161, 242, 0.1);
-  --color-primary-200: rgba(29, 161, 242, 0.4);
-  --color-primary-300: rgba(29, 161, 242, 0.5);
-  --color-primary-400: rgba(29, 161, 242, 0.6);
-  --color-primary-500: rgba(29, 161, 242, 0.7);
-  --color-primary-700: rgba(29, 161, 242, 0.8);
-  --color-primary-800: rgba(29, 161, 242, 0.9);
-  --color-primary-900: rgba(29, 161, 242, 1);
-  --color-secondary-washed-out: rgb(136, 153, 166,0.3);
-  --color-secondary: rgba(136, 153, 166,0.05);
-  --color-dark: #15202B;
+  --color-primary-100: #caf0f8;
+  --color-primary-200: #ade8f4;
+  --color-primary-300: #90e0ef;
+  --color-primary-400: #48cae4;
+  --color-primary-500: #00b4d8;
+  --color-primary-700: #0096c7;
+  --color-primary-800: #0077b6;
+  --color-primary-900: #023e8a;
+  --color-primary-hover: rgba(0, 119, 182, 0.2);
+
+  --color-secondary-washed-out: rgb(136, 153, 166, 0.3);
+  --color-secondary: rgba(136, 153, 166, 0.05);
+  --color-dark: #15202b;
 }
 
 h1 {
@@ -60,32 +80,15 @@ p {
   font-weight: 500;
 }
 
-
-html,
-body,
-#__next {
-  background-color: var(--color-dark);
-  color: var(--color-button-text);
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-#__next {
-  overflow: auto;
-}
-
-::-webkit-scrollbar {
-  width: 15px;
+/* ::-webkit-scrollbar {
+  width: 10px;
   background: var(--color-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-secondary-washed-out); 
-  border-radius: 5px;
-}
+  border-radius: 3px;
+} */
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -93,7 +96,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -107,25 +110,17 @@ textarea {
   background: var(--color-primary-700);
 }
 
-html {
-  position: fixed;
-}
-
 .css-12jo7m5 {
   color: var(--color-button-text) !important;
 }
 
-.css-xb97g8:hover {  
+.css-xb97g8:hover {
   background: var(--color-primary-300) !important;
   color: var(--color-button-text) !important;
 }
 
 .dropdown {
   transform: translateX(-100%);
-}
-
-.w-full {
-  width: 100%;
 }
 
 .emoji {
@@ -135,10 +130,6 @@ html {
   margin: 0 5px;
 }
 
-.icon:hover {
- background: rgba(0,0,0,0.3);
-}
-
 .bar-of-progress {
   z-index: 50;
 }
@@ -146,4 +137,8 @@ html {
 .__react_component_tooltip::before,
 .__react_component_tooltip::after {
   content: none !important;
+}
+
+.__react_component_tooltip.show {
+  opacity: 1 !important;
 }
