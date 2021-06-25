@@ -1,5 +1,9 @@
 import React from "react";
-import { sizeClassNames, fontWeightClassNames, FontWeightProps } from "./utils";
+import {
+  FontWeightProps,
+  sizeClassNames,
+  fontWeightClassNames,
+} from "../shared/classNames";
 
 interface HeaderProps extends FontWeightProps {
   size: keyof typeof sizeClassNames;
