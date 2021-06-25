@@ -1,30 +1,25 @@
 import Head from "next/head";
 import React from "react";
 import {
-  AiFillCompass,
-  AiFillHome,
-  AiOutlineCompass,
-  AiOutlineHome,
-  AiOutlineUser,
-} from "react-icons/ai";
-import { BsFillPersonPlusFill } from "react-icons/bs";
-
-import {
   SCREEN_COLUMNS_TYPE,
   useScreenType,
 } from "../../utils/hooks/useScreenType";
 import CenteredLoader from "../Loader/CenteredLoader";
-import Logo from "../Logo";
-import Header from "../Typography/Header";
-import Link from "../utilities/Link";
 import ProtectedRoute from "../utilities/ProtectedRoute";
-import Icon from "../Icon";
-import Navbar from "./Navbar/Navbar";
+import BottomBar from "./Bars/BottomBar/BottomBar";
+import Navbar from "./Bars/Navbar/Navbar";
+import TopBar from "./Main/TopBar";
 
 const HomePage = () => {
   const screenType = useScreenType();
 
   if (!screenType) return <CenteredLoader logo />;
+
+  let gridTemplateColumns = "60px 1fr";
+  const isMobile = screenType === SCREEN_COLUMNS_TYPE.fullscreen;
+  if (isMobile) {
+    gridTemplateColumns = "1fr";
+  }
 
   return (
     <ProtectedRoute>
@@ -35,16 +30,13 @@ const HomePage = () => {
       <div
         className="grid max-w-screen-xl mx-auto"
         style={{
-          gridTemplateColumns: "60px 1fr",
+          gridTemplateColumns,
         }}
       >
-        <Navbar />
-        <main className="max-w-screen-xl mx-auto px-4 2xl:border-r-default 2xl:border-l-default border-secondary-washed-out">
-          <div>
-            <Header as="h1" fontWeight="bold" size="2xl">
-              Home
-            </Header>
-          </div>
+        {!isMobile ? <Navbar /> : <BottomBar />}
+
+        <main className="max-w-screen-xl mx-auto px-4 2xl:border-r-default border-secondary-washed-out mb-4">
+          <TopBar />
           <div>
             Lorem ipsum is a name for a common type of placeholder text. Also
             known as filler or dummy text, this is simply copy that serves to
