@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "../../../utilities/Link";
+import Link from "../../utilities/Link";
 import Slash from "./Slash";
 
 interface Props {

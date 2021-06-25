@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-import { useFilesFoldersQuery } from "../../../../generated/graphql";
-import { useFileFolderStore } from "../../../../stores/useFileFolderStore";
-import CenteredLoader from "../../../Loader/CenteredLoader";
+import { useFilesFoldersQuery } from "../../../generated/graphql";
+import { useFileFolderStore } from "../../../stores/useFileFolderStore";
+import CenteredLoader from "../../Loader/CenteredLoader";
 import FileFolderWrapper from "./NavigationWrapper";
 import BreadcrumbWrapper from "./BreadcrumbWrapper";
 import Record from "../Record/Record";

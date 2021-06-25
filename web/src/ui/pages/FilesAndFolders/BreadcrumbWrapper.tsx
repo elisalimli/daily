@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-import { useFoldersQuery } from "../../../../generated/graphql";
-import { useFileFolderStore } from "../../../../stores/useFileFolderStore";
+import { useFoldersQuery } from "../../../generated/graphql";
+import { useFileFolderStore } from "../../../stores/useFileFolderStore";
 import Breadcrumb from "./Breadcrumb";
 
 const BreadcrumbWrapper: React.FC = () => {

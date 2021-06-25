@@ -2,7 +2,7 @@ import React from "react";
 import {
   FileFragmentFragment,
   FolderFragmentFragment,
-} from "../../../../generated/graphql";
+} from "../../../generated/graphql";
 import Navigation from "./Navigation";
 
 interface Props {

@@ -3,9 +3,9 @@ import { Folder } from "react-feather";
 import {
   FileFragmentFragment,
   FolderFragmentFragment,
-} from "../../../../generated/graphql";
-import { iconSize } from "../../../IconSize";
-import Link from "../../../utilities/Link";
+} from "../../../generated/graphql";
+import { iconSize } from "../../IconSize";
+import Link from "../../utilities/Link";
 
 interface NavigationProps {
   fileFolder: FileFragmentFragment | FolderFragmentFragment;
