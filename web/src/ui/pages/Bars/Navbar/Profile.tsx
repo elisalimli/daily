@@ -8,8 +8,8 @@ interface ProfileProps {}
 const ProfileImg = () => (
   <img
     className="rounded-full"
-    width={30}
-    height={30}
+    width={40}
+    height={40}
     src="https://avatars.githubusercontent.com/u/67149699?v=4"
     alt="profile"
   />
@@ -18,7 +18,7 @@ const ProfileImg = () => (
 const Profile: React.FC<ProfileProps> = () => {
   return (
     <div>
-      <Icon icon={ProfileImg} style={{ width: 50, height: 50 }} />
+      <Icon icon={ProfileImg} style={{ width: 55, height: 55 }} />
     </div>
   );
 };

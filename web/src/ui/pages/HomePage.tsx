@@ -8,7 +8,7 @@ import CenteredLoader from "../Loader/CenteredLoader";
 import ProtectedRoute from "../utilities/ProtectedRoute";
 import BottomBar from "./Bars/BottomBar/BottomBar";
 import Navbar from "./Bars/Navbar/Navbar";
-import TopBar from "./Main/TopBar";
+import TopBar from "./Bars/TopBar";
 
 const HomePage = () => {
   const screenType = useScreenType();
@@ -17,9 +17,7 @@ const HomePage = () => {
 
   let gridTemplateColumns = "60px 1fr";
   const isMobile = screenType === SCREEN_COLUMNS_TYPE.fullscreen;
-  if (isMobile) {
-    gridTemplateColumns = "1fr";
-  }
+  if (isMobile) gridTemplateColumns = "1fr";
 
   return (
     <ProtectedRoute>
@@ -35,9 +33,13 @@ const HomePage = () => {
       >
         {!isMobile ? <Navbar /> : <BottomBar />}
 
-        <main className="max-w-screen-xl mx-auto px-4 2xl:border-r-default border-secondary-washed-out mb-4">
+        <main
+          className={`max-w-screen-xl mx-auto 2xl:border-r-default border-secondary-washed-out mb-4 ${
+            !isMobile ? "border-l-default ml-1" : ""
+          }`}
+        >
           <TopBar />
-          <div>
+          <div className="px-2">
             Lorem ipsum is a name for a common type of placeholder text. Also
             known as filler or dummy text, this is simply copy that serves to
             fill a space without actually saying anything meaningful. ... Lorem

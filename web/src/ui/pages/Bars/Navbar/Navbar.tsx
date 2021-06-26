@@ -6,10 +6,12 @@ import Profile from "./Profile";
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => (
-  <div className="flex flex-col items-end sticky top-0 h-screen border-r-default border-secondary-washed-out p-2">
-    <Brand />
-    <div className="flex flex-col justify-between h-full">
-      <Navigator />
+  <div className="ml-auto">
+    <div className="flex flex-col justify-between items-center sticky top-0 h-screen px-1 py-2">
+      <div>
+        <Brand />
+        <Navigator />
+      </div>
       <Profile />
     </div>
   </div>

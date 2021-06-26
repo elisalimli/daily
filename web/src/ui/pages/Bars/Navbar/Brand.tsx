@@ -8,7 +8,7 @@ interface BrandProps {}
 const Brand: React.FC<BrandProps> = () => (
   <div className="mb-2">
     <Link href="/home">
-      <Icon icon={Logo} iconProps={{ width: 25, height: 25 }} />
+      <Icon icon={Logo} iconProps={{ width: 30, height: 30 }} />
     </Link>
   </div>
 );

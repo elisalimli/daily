@@ -65,7 +65,7 @@ module.exports = {
         "washed-out": "var(--color-secondary-washed-out)",
       },
       accent: {
-        dark: "var(--color-dark)",
+        dark: "var(--color-accent-dark)",
       },
     },
     minWidth: {
