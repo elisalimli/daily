@@ -17,7 +17,7 @@ const Navigator: React.FC<NavigatorProps> = () => (
           icon={IconComponent}
           iconProps={{ className: "text-2xl" }}
         />
-        <Tooltip place="right" id={`nav-${text}`}>
+        <Tooltip place="bottom" id={`nav-${text}`}>
           {text}
         </Tooltip>
       </Link>

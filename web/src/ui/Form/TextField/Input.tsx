@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({
 }) => {
   return (
     <input
-      className={`w-full bg-primary-700 border-default border-primary-600 rounded-sm ${
+      className={`w-full bg-primary-hover border-default border-secondary-washed-out rounded-sm ${
         noRing ? null : "focus:ring-2 focus:ring-secondary"
       } text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ${extraClassName}`}
       {...props}

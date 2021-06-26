@@ -1,5 +1,6 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
+import { useScreenStore } from "../../stores/useScreenStore";
 import {
   SCREEN_COLUMNS_TYPE,
   useScreenType,
@@ -12,11 +13,16 @@ import TopBar from "./Bars/TopBar";
 
 const HomePage = () => {
   const screenType = useScreenType();
+  const { isMobile, setIsMobile } = useScreenStore();
+
+  useEffect(() => {
+    setIsMobile(screenType === SCREEN_COLUMNS_TYPE.fullscreen);
+  }, [screenType]);
 
   if (!screenType) return <CenteredLoader logo />;
 
   let gridTemplateColumns = "60px 1fr";
-  const isMobile = screenType === SCREEN_COLUMNS_TYPE.fullscreen;
+
   if (isMobile) gridTemplateColumns = "1fr";
 
   return (
@@ -34,7 +40,7 @@ const HomePage = () => {
         {!isMobile ? <Navbar /> : <BottomBar />}
 
         <main
-          className={`max-w-screen-xl mx-auto 2xl:border-r-default border-secondary-washed-out mb-4 ${
+          className={`max-w-screen-xl mx-auto xl:border-r-default border-secondary-washed-out mb-4 ${
             !isMobile ? "border-l-default ml-1" : ""
           }`}
         >

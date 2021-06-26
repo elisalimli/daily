@@ -22,7 +22,7 @@ const Icon: FC<IconProps> = ({
     >
       <IconComponent
         {...iconProps}
-        className={`${iconProps?.className || ""} group-hover:text-primary-500`}
+        className={`${iconProps?.className || ""} group-hover:text-primary-300`}
       />
     </div>
   );

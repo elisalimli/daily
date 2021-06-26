@@ -43,7 +43,8 @@ module.exports = {
     width: (theme) => ({
       auto: "auto",
       ...theme("spacing"),
-      375: "375px",
+      ...theme("minWidth"),
+      275: "275px",
       "1/6": "16%",
     }),
     colors: {
@@ -64,9 +65,7 @@ module.exports = {
         DEFAULT: "var(--color-secondary)",
         "washed-out": "var(--color-secondary-washed-out)",
       },
-      accent: {
-        dark: "var(--color-accent-dark)",
-      },
+ 
     },
     minWidth: {
       0: "0",
@@ -131,7 +130,8 @@ module.exports = {
     backgroundColor: ({ after }) => after(["disabled"]),
     textColor: ({ after }) => after(["disabled"]),
     scrollbar: ["rounded", "dark"],
-    minWidth: ["responsive"],
+    width: ["responsive", "focus-within"],
+    minWidth: ["responsive"]
   },
   plugins: [require("tailwind-scrollbar")],
 };
